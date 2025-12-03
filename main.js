@@ -383,3 +383,25 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   window.open(whatsappURL, "_blank");
 });
 
+const menuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  if (mobileMenu.classList.contains('h-0')) {
+    // Open menu
+    mobileMenu.classList.remove('h-0');
+    mobileMenu.classList.add('h-screen');
+  } else {
+    // Close menu
+    mobileMenu.classList.remove('h-screen');
+    mobileMenu.classList.add('h-0');
+  }
+});
+
+// Close menu on link click
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('h-screen');
+    mobileMenu.classList.add('h-0');
+  });
+});

@@ -55,11 +55,23 @@
      </div>
 
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-white focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
+      <!-- Mobile Hamburger Button -->
+<button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none z-50 relative">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+  </svg>
+</button>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 overflow-hidden bg-black/70 backdrop-blur-lg z-40 transition-all duration-500 ease-in-out flex flex-col items-center justify-center gap-6">
+  <a href="#about" class="text-white text-lg uppercase tracking-wide hover:text-primary transition-colors">About</a>
+  <a href="#skills" class="text-white text-lg uppercase tracking-wide hover:text-primary transition-colors">Skills</a>
+  <a href="#projects" class="text-white text-lg uppercase tracking-wide hover:text-primary transition-colors">Projects</a>
+  <a href="#contact" class="text-white text-lg uppercase tracking-wide hover:text-primary transition-colors">Contact</a>
+  <a href="/public/resume.pdf" download class="py-2 px-6 bg-white/20 hover:bg-primary hover:text-black rounded-full text-sm font-medium transition-colors">Download CV</a>
+</div>
+
+
     </nav>
   </header>
 
@@ -439,11 +451,11 @@
 
   <footer class="py-8 border-t border-white/5 mt-20">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-secondary text-sm">© 2024 Portfolio. All rights reserved.</p>
+      <p class="text-secondary text-sm">© Rehan Portfolio. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="#" class="text-secondary hover:text-primary transition-colors">Twitter</a>
-        <a href="#" class="text-secondary hover:text-primary transition-colors">LinkedIn</a>
-        <a href="#" class="text-secondary hover:text-primary transition-colors">GitHub</a>
+        <a href="https://www.fiverr.com/sellers/m_rehan456/edit" class="text-secondary hover:text-primary transition-colors">Fiverr</a>
+        <a href="https://www.linkedin.com/in/muhammad-rehan-247351385/" class="text-secondary hover:text-primary transition-colors">LinkedIn</a>
+        <a href="https://github.com/Muhammad-Rehan456?tab=repositories" class="text-secondary hover:text-primary transition-colors">GitHub</a>
       </div>
     </div>
   </footer>
